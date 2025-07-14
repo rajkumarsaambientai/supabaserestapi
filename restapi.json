@@ -1,0 +1,179 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ambient.ai Supabase REST API",
+    "version": "1.0.0",
+    "description": "REST API for Clari Copilot and Salesforce CRM data"
+  },
+  "servers": [
+    {
+      "url": "https://jwpgtjibqvealvbdehdn.supabase.co/rest/v1"
+    }
+  ],
+  "paths": {
+    "/clari_calls": {
+      "get": {
+        "summary": "Get Clari Call By ID",
+        "operationId": "getClariCallById",
+        "parameters": [
+          {
+            "name": "call_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "select",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "*"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Clari Call record"
+          }
+        }
+      }
+    },
+    "/sfdc_opportunities": {
+      "get": {
+        "summary": "Get Opportunity By ID",
+        "operationId": "getOpportunityById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "select",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "*"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An Opportunity record"
+          }
+        }
+      }
+    },
+    "/sfdc_accounts": {
+      "get": {
+        "summary": "Get Account By ID",
+        "operationId": "getAccountById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "select",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "*"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "An Account record"
+          }
+        }
+      }
+    },
+    "/sfdc_contacts": {
+      "get": {
+        "summary": "Get Contact By ID",
+        "operationId": "getContactById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "select",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "*"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Contact record"
+          }
+        }
+      }
+    },
+    "/sfdc_leads": {
+      "get": {
+        "summary": "Get Lead By ID",
+        "operationId": "getLeadById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "select",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "*"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A Lead record"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ]
+}
