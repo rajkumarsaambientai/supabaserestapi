@@ -3,7 +3,7 @@
   "info": {
     "title": "Ambient.ai Supabase REST API",
     "version": "1.0.0",
-    "description": "REST API for Clari Copilot and Salesforce CRM data"
+    "description": "Live REST API for Clari Copilot calls and Salesforce CRM data via Supabase."
   },
   "servers": [
     {
@@ -163,18 +163,6 @@
     }
   },
   "components": {
-  "schemas": {},
-  "securitySchemes": {
-    "ApiKeyAuth": {
-      "type": "apiKey",
-      "name": "Authorization",
-      "in": "header"
-    }
+    "schemas": {}
   }
-},
-  "security": [
-    {
-      "ApiKeyAuth": []
-    }
-  ]
 }
